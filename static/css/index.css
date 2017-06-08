@@ -1,0 +1,42 @@
+/*index 开始*/
+*{
+    margin:0;
+    padding:0;
+}
+ul,ol,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:link {
+    color: #000/* 未访问的链接 */
+}
+a:visited {
+    color: #000/* 已访问的链接 */
+}
+html, body{
+    font-size: 10px;
+}
+#index{
+    width: 600px;
+    margin:0 auto;
+    position: relative;
+    padding-bottom: 70px;
+}
+@media(max-width: 600px){
+  #index{
+    width: 100%;
+  }
+  #index .title{
+    width: 100%;
+  }
+  #index .content{
+    width: 100%;
+  }
+  #index .wrapper{
+    width: 100%;
+  }
+}
+

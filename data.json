@@ -1,0 +1,28 @@
+{
+  "message": [
+    {
+      "realname": "jackson",
+      "postdate": "5秒前",
+      "content": "想要小时候送棒棒糖的爱情",
+      "photo": "./static/01.jpg",
+      "love-num": "6",
+      "com-num": "3"
+    },
+    {
+      "realname": "爱爱爱爱",
+      "postdate": "5分钟前",
+      "content": "真无聊",
+      "photo": "./static/01.jpg",
+      "love-num": "4",
+      "com-num": "3"
+    },
+    {
+      "realname": "john",
+      "postdate": "2小时前",
+      "content": "不知道要干嘛",
+      "photo": "./static/01.jpg",
+      "love-num": "1",
+      "com-num": "9"
+    }
+  ]
+}
