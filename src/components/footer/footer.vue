@@ -1,16 +1,39 @@
 <template>
   <footer class="footer">
     <div class="footer-left">
-      <img src="./imgs/page-2.jpg" alt="">
+      <router-link to="/">
+        <img src="./imgs/page-2.jpg" v-if="isClickH" v-on:click="changeImgH">
+        <img src="./imgs/page-1.jpg" v-else v-on:click="changeImgH">
+      </router-link>
     </div>
     <div class="footer-right">
-      <a href="javascript:"><img src="./imgs/person-1.jpg" alt=""></a>
+      <router-link to="/user">
+        <img src="./imgs/person-2.jpg" v-if="isClickU" v-on:click="changeImgU">
+        <img src="./imgs/person-1.jpg" v-else v-on:click="changeImgU">
+      </router-link>
     </div>
   </footer>
 </template>
 
 <script>
-export default{}
+export default{
+    data(){
+        return {
+          'isClickH': true,
+          'isClickU': false
+      }
+    },
+  methods: {
+    changeImgH: function () {
+      this.isClickH = true;
+      this.isClickU = false;
+    },
+    changeImgU: function () {
+      this.isClickH = false;
+      this.isClickU = true;
+    }
+  }
+}
 </script>
 
 <style>

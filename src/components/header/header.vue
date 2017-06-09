@@ -1,19 +1,37 @@
 <template>
-  <div class="title navbar navbar-fixed-top">
-    <div class="title-left" id="logo">
-      <img src="./favicon.jpg" alt="">
+  <div>
+    <div class="title navbar navbar-fixed-top">
+      <div class="title-left" id="logo">
+        <img src="./favicon.jpg" alt="">
+      </div>
+      <div class="title-center" id="title">
+        NfuConnect
+      </div>
+      <div class="title-right" >
+        <img id="open" src="./add.jpg" alt="" v-on:click="changeShow">
+      </div>
     </div>
-    <div class="title-center" id="title">
-      NfuConnect
-    </div>
-    <div class="title-right" >
-      <img id="open" src="./add.jpg" alt="">
-    </div>
+    <v-dialog v-if="isShow"></v-dialog>
   </div>
 </template>
 
 <script>
-export default{}
+  import dialog from '../dialog/dialog'
+export default{
+  components: {
+    'v-dialog': dialog
+  },
+  data() {
+      return{
+        'isShow': false
+      }
+  },
+  methods: {
+    changeShow: function () {
+      return this.isShow = true;
+    }
+  }
+}
 </script>
 
 <style>

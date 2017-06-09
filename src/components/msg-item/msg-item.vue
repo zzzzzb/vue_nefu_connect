@@ -3,25 +3,25 @@
     <div class="wrapper">
       <div class="content-header">
         <div class="content-header-left">
-          <img src="" alt="">
-          <span>haha</span>
+          <img :src="photo" alt="">
+          <span>{{name}}</span>
         </div>
-        <div class="content-header-right content-date">2017-05-26 10:34:01</div>
+        <div class="content-header-right content-date">{{date}}</div>
       </div>
       <div class="content-middle">
-        <div class="middle-text">想要小时候送棒棒糖的爱情</div>
+        <div class="middle-text">{{content}}</div>
       </div>
       <div class="content-footer">
         <div class="content-footer-love">
           <p class="content-footer-love-pic">
             <img src="./love.jpg" alt="" class="content-footer-love-img">
-            <input type="checkbox" value="" class="content-footer-love-input">
+            <input type="checkbox" :value="id" class="content-footer-love-input">
           </p>
-          <span>5</span>
+          <span>{{ln}}</span>
         </div>
         <div class="content-footer-comment">
           <a href="javascript:"><img src="./comment.jpg" alt=""></a>
-          <span>7</span>
+          <span>{{cn}}</span>
         </div>
       </div>
     </div>
@@ -29,7 +29,14 @@
 </template>
 
 <script>
-export default{}
+export default{
+  props:['id','name','photo','date','content','ln','cn'],
+  data () {
+    return {
+
+    }
+  }
+}
 </script>
 
 <style>
