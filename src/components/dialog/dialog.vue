@@ -1,6 +1,6 @@
 <template>
   <div class="publish-container">
-    <div class="publish-mask"></div>
+    <div class="publish-mask" v-on:click="changeShow"></div>
     <div class="publish-box">
       <header class="publish-header">
         <span class="publish-btn1 glyphicon glyphicon-remove"></span>
@@ -26,6 +26,16 @@
 
 <script>
 export default{
+  data() {
+    return{
+      'isShow': false
+    }
+  },
+  methods: {
+    changeShow: function () {
+      this.$emit('transfer');
+    }
+  }
 }
 </script>
 

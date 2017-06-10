@@ -25,7 +25,8 @@ var proxyTable = config.dev.proxyTable
 var app = express()
 
 var appData = require('../data.json')
-var message = appData.message
+var message = appData.messages
+var comment = appData.comments
 
 var apiRouters = express.Router()
 
@@ -33,6 +34,12 @@ apiRouters.get('/message',function (req, res) {
   res.json({
     errno: 0,
     data: message
+  })
+})
+apiRouters.get('/comment',function (req, res) {
+  res.json({
+    errno: 0,
+    data: comment
   })
 })
 

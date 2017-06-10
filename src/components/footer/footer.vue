@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="footer-left">
-      <router-link to="/">
+      <router-link to="/msg-list">
         <img src="./imgs/page-2.jpg" v-if="isClickH" v-on:click="changeImgH">
         <img src="./imgs/page-1.jpg" v-else v-on:click="changeImgH">
       </router-link>

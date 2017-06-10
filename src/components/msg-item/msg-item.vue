@@ -2,10 +2,13 @@
   <li>
     <div class="wrapper">
       <div class="content-header">
-        <div class="content-header-left">
-          <img :src="photo" alt="">
-          <span>{{name}}</span>
-        </div>
+        <router-link :to="'/details/'+id">
+          <div class="content-header-left">
+            <img src="./man1.jpg" alt="" v-if="isAnonymity">
+            <img :src="photo" alt="" v-else>
+            <span>{{name}}</span>
+          </div>
+        </router-link>
         <div class="content-header-right content-date">{{date}}</div>
       </div>
       <div class="content-middle">
@@ -14,15 +17,18 @@
       <div class="content-footer">
         <div class="content-footer-love">
           <p class="content-footer-love-pic">
-            <img src="./love.jpg" alt="" class="content-footer-love-img">
-            <input type="checkbox" :value="id" class="content-footer-love-input">
+            <img src="./love-2.jpg" alt="" class="content-footer-love-img" v-if="isLike">
+            <img src="./love.jpg" alt="" class="content-footer-love-img" v-else>
+            <input type="checkbox" :value="id" class="content-footer-love-input" v-on:click="Like">
           </p>
           <span>{{ln}}</span>
         </div>
-        <div class="content-footer-comment">
-          <a href="javascript:"><img src="./comment.jpg" alt=""></a>
-          <span>{{cn}}</span>
-        </div>
+        <router-link :to="'/details/'+id">
+          <div class="content-footer-comment">
+            <a href="javascript:"><img src="./comment.jpg" alt=""></a>
+            <span>{{cn}}</span>
+          </div>
+        </router-link>
       </div>
     </div>
   </li>
@@ -30,17 +36,33 @@
 
 <script>
 export default{
-  props:['id','name','photo','date','content','ln','cn'],
+  props:['id','name','photo','date','content','ln','cn','isAnonymity'],
   data () {
     return {
+      'isLike': false,
+      falg: true
+    }
+  },
+  methods: {
+    Like: function () {
+      if(this.falg == true){
+        this.isLike = true;
+        this.ln++;
+        this.falg = false;
+      }else{
+        this.isLike = false;
+        this.ln--;
+        this.falg = true;
+      }
 
     }
-  }
+  },
+
 }
 </script>
 
 <style>
-  #index .wrapper{
+ #index .wrapper{
     width: 600px;
     padding: 12px 25px 4px;
     border-bottom: 15px solid rgb(242, 242, 242);
@@ -134,4 +156,18 @@ export default{
     color: rgb(170, 170, 170);
     font-size: 1.8rem;
   }
+ @media(max-width: 600px){
+   #index{
+     width: 100%;
+   }
+   #index .title{
+     width: 100%;
+   }
+   #index .content{
+     width: 100%;
+   }
+   #index .wrapper{
+     width: 100%;
+   }
+ }
 </style>

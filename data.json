@@ -1,5 +1,5 @@
 {
-  "message": [
+  "messages": [
     {
       "msg_id": 1,
       "realname": "jackson",
@@ -7,25 +7,71 @@
       "content": "想要小时候送棒棒糖的爱情",
       "photo": "./static/01.jpg",
       "love_num": 6,
-      "com_num": 3
+      "com_num": 3,
+      "isAnonymity": 1
     },
     {
       "msg_id": 2,
       "realname": "爱爱爱爱",
       "postdate": "5分钟前",
       "content": "真无聊",
-      "photo": "./static/01.jpg",
+      "photo": "http://127.0.0.1/nefu_connect/assets/img/user_portrait/zzzzzz.jpeg",
       "love_num": 4,
-      "com_num": 3
+      "com_num": 3,
+      "isAnonymity": 0
     },
     {
       "msg_id": 3,
+      "realname": "max",
+      "postdate": "6小时前",
+      "content": "啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊",
+      "photo": "./static/01.jpg",
+      "love_num": 14,
+      "com_num": 2,
+      "isAnonymity": 1
+    },
+    {
+      "msg_id": 4,
+      "realname": "tina",
+      "postdate": "15小时前",
+      "content": "匿名平台真有意思",
+      "photo": "./static/01.jpg",
+      "love_num": 2,
+      "com_num": 6,
+      "isAnonymity": 1
+    },
+    {
+      "msg_id": 5,
       "realname": "john",
-      "postdate": "2小时前",
+      "postdate": "1天前",
       "content": "不知道要干嘛",
       "photo": "./static/01.jpg",
       "love_num": 1,
-      "com_num": 9
+      "com_num": 9,
+      "isAnonymity": 1
+    }
+  ],
+  "comments": [
+    {
+      "com_id": 1,
+      "portrait": "http://127.0.0.1/nefu_connect/assets/img/user_portrait/zzzzzz.jpeg",
+      "realname": "jack",
+      "postdate": "5分钟前",
+      "content": "不错不错，赞"
+    },
+    {
+      "com_id": 2,
+      "portrait": "http://127.0.0.1/nefu_connect/assets/img/user_portrait/zzzzzz.jpeg",
+      "realname": "jack",
+      "postdate": "5分钟前",
+      "content": "不错不错，赞"
+    },
+    {
+      "com_id": 3,
+      "portrait": "http://127.0.0.1/nefu_connect/assets/img/user_portrait/zzzzzz.jpeg",
+      "realname": "jack",
+      "postdate": "5分钟前",
+      "content": "不错不错，赞"
     }
   ]
 }

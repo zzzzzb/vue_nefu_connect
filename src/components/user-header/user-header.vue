@@ -3,24 +3,24 @@
     <a href="welcome/exit_login"><span class="user-more glyphicon glyphicon-option-horizontal"></span></a>
     <button type="button" class="user-more glyphicon glyphicon-option-horizontal" data-toggle="modal" data-target=".bs-example-modal-sm"></button>
     <div class="user-photo">
-      <img src="" alt="username">
-      <div>realname</div>
+      <img src="http://127.0.0.1/nefu_connect/assets/img/user_portrait/zzzzzz.jpeg" alt="username">
+      <div>name</div>
     </div>
     <div class="user-info">
       <div class="user-info-left">
-        <a href="welcome/your_msg">
+        <a href="javascript:">
           <span>帖子</span>
         </a>
-        <a href="welcome/your_msg">
-          <span class="number"></span>
+        <a href="javascript:">
+          <span class="number">5</span>
         </a>
       </div>
       <div class="user-info-right">
-        <a href="welcome/your_love">
+        <a href="javascript:">
           <span>喜欢</span>
         </a>
-        <a href="welcome/your_love">
-          <span class="number"></span>
+        <a href="javascript:">
+          <span class="number">3</span>
         </a>
       </div>
     </div>

@@ -8,10 +8,10 @@
         NfuConnect
       </div>
       <div class="title-right" >
-        <img id="open" src="./add.jpg" alt="" v-on:click="changeShow">
+        <img id="open" src="./add.jpg" alt="" v-on:click="Show">
       </div>
     </div>
-    <v-dialog v-if="isShow"></v-dialog>
+    <v-dialog v-if="isShow" v-on:transfer="Hide"></v-dialog>
   </div>
 </template>
 
@@ -27,8 +27,11 @@ export default{
       }
   },
   methods: {
-    changeShow: function () {
+    Show: function () {
       return this.isShow = true;
+    },
+    Hide: function () {
+      return this.isShow = false;
     }
   }
 }
@@ -88,5 +91,19 @@ export default{
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
+  }
+  @media(max-width: 600px){
+    #index{
+      width: 100%;
+    }
+    #index .title{
+      width: 100%;
+    }
+    #index .content{
+      width: 100%;
+    }
+    #index .wrapper{
+      width: 100%;
+    }
   }
 </style>
